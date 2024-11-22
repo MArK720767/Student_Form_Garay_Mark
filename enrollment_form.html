@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('bg_img.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px;
+        }
+
+        .container {
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%; 
+            max-width: 1200px; 
+        }
+
+        .form-container, .table-container {
+            background-color: rgb(255, 255, 255); 
+            background-size: cover;
+            padding: 20px;
+            border-radius: 20px;
+            width: 45%; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+
+        .table-container {
+            background-color: rgb(255, 255, 255); 
+            background-size: cover;
+            padding: 20px;
+            border-radius: 20px;
+            width: 90%; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border: 1px solid rgb(0, 0, 0);
+            background-color: #61b2e8;      
+            padding: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto; 
+            display: block;
+            margin-bottom: 20px; 
+        }
+
+        .longbox{
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+        }
+
+        .shortbox{
+            height: 30px;
+            border-radius: 3px;
+        }
+        .button{
+            text-align: center;
+        }
+
+        button[type="submit"] {
+            background-color: #0059ff;
+            width: 100%;
+            padding: 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div><img src="dll_logo-removebg-preview.png" alt="logo" class="logo"></div>
+    
+    <div class="container">
+        <div class="form-container">
+            <h1>Student Enrollment Form</h1>
+            
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Fill in the form fields.</li>
+                <li>Check your interests.</li>
+                <li>Click "Submit" to submit.</li><br>
+            </ol>
+
+            <form action="#" method="post" id="enrollmentForm">
+                <label for="fullName">Full Name:</label> <br><br>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your Name" class="longbox" required><br><br>
+
+                <label for="email">Email Address:</label><br><br>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" class="longbox" required><br><br>
+
+                <label for="age">Age:</label><br><br>
+                <input type="number" id="age" name="age" min="1" placeholder="Age" class="shortbox" required><br><br>
+
+                <label>Sex:</label><br><br>
+                <input type="radio" id="male" name="sex" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="Female" required>
+                <label for="female">Female</label><br><br>
+
+                <label for="course">Course Options:</label><br><br>
+                <select id="course" name="course" class="shortbox" required>
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSSW">BSSW</option>
+                    <option value="BSPA">BSPA</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="BSED">BSED</option>
+                </select><br><br>
+
+                <label>Interests:</label><br><br>
+                <div id="interestsContainer">
+                    <input type="checkbox" id="webDev" name="interests" value="Web Development">
+                    <label for="webDev">Web Development</label><br>
+                    <input type="checkbox" id="dataSci" name="interests" value="Data Science">
+                    <label for="dataSci">Data Science</label><br>
+                    <input type="checkbox" id="networking" name="interests" value="Networking">
+                    <label for="networking">Networking</label><br>
+                    <input type="checkbox" id="graphicDesign" name="interests" value="Graphic Design">
+                    <label for="graphicDesign">Graphic Design</label><br><br>
+                </div>
+                <br>
+                <div  class="button">
+                    <button type="submit">Enroll Now</button>
+
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h1>Enrolled Students</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Course</th>
+                    <th>Interests</th>
+                </tr>
+                
+                <tr>
+                    <td>023A-12345</td>
+                    <td>John Cena</td>
+                    <td>youcantseeme@gmail.com</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Web Development, Data Science</td>
+                </tr>
+                
+                <tr>
+                    <td>023A-109876</td>
+                    <td>Ace Philip Asis</td>
+                    <td>aluhakbar@yahoo.com</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Networking</td>
+                </tr>
+
+                <tr>
+                    <td>023A-10876</td>
+                    <td>Mark Ernest Garay</td>
+                    <td>markernest.dll@gmail.com</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Data Science</td>
+                </tr>
+
+                <tr>
+                    <td>023A-89876</td>
+                    <td>Merry Geoise</td>
+                    <td>theonepieceisreal@gmail.com</td>
+                    <td>20</td>
+                    <td>Female</td>
+                    <td>BSIT</td>
+                    <td>Graphic Design</td>
+                </tr>
+
+                <tr>
+                    <td>023A-911</td>
+                    <td>Lucy Anne</td>
+                    <td>worthit@yahoo.com</td>
+                    <td>22</td>
+                    <td>Female</td>
+                    <td>BSIT</td>
+                    <td>Web Development</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
